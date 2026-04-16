@@ -1,0 +1,199 @@
+:root {
+  --bg: #0a0a0f;
+  --bg2: #12121a;
+  --bg3: #1a1a26;
+  --border: #2a2a3d;
+  --accent: #7c6aff;
+  --accent2: #ff6a6a;
+  --accent3: #6affd4;
+  --text: #e8e8f0;
+  --text2: #8888aa;
+  --success: #4cff91;
+  --error: #ff4c6a;
+  --warning: #ffb84c;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+input,
+textarea,
+select {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(124, 106, 255, 0.15);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  transition: all 0.15s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #9580ff;
+  box-shadow: 0 0 20px rgba(124, 106, 255, 0.3);
+}
+
+.btn-danger {
+  background: var(--accent2);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #ff8080;
+}
+
+.btn-success {
+  background: #1a3a2a;
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.btn-success:hover {
+  background: var(--success);
+  color: #0a0a0f;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text2);
+  margin-bottom: 6px;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+pre {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow: auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.7;
+  max-height: 400px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.tag-get {
+  background: rgba(106, 255, 212, 0.15);
+  color: var(--accent3);
+  border: 1px solid rgba(106, 255, 212, 0.3);
+}
+
+.tag-post {
+  background: rgba(124, 106, 255, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(124, 106, 255, 0.3);
+}
+
+.tag-put {
+  background: rgba(255, 184, 76, 0.15);
+  color: var(--warning);
+  border: 1px solid rgba(255, 184, 76, 0.3);
+}
+
+.tag-delete {
+  background: rgba(255, 106, 106, 0.15);
+  color: var(--accent2);
+  border: 1px solid rgba(255, 106, 106, 0.3);
+}
+
+.status-ok {
+  color: var(--success);
+}
+
+.status-err {
+  color: var(--error);
+}
